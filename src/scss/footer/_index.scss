@@ -1,0 +1,18 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.site__footer{
+    background-color: v.$primario;
+
+    .credits__text{
+        padding: 1rem 0 3rem 0;
+        margin: 0;
+        text-align: center;
+        color: v.$blanco;
+        font-size: 1.5rem;
+
+        @include m.tablet{
+            font-size: 2rem;
+        }
+    }
+}

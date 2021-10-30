@@ -8,10 +8,128 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- CDN Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="build/css/app.css">
-    <title>Tu Aula - Page One</title>
+    <title>Yogurt de la casa</title>
 </head>
 <body>
+    <header>
+        <div class="nav__header">
+            <div class="nav__image">
+                <img class="nav__logo" src="build/img/logo.svg">
+            </div>
+
+            <div class="nav__a">
+                <a href="#inicio">Inicio</a>
+                <a href="#products">Productos</a>
+                <a href="#contactus">Contáctenos</a>
+            </div>
+
+            <!--Menu Movil-->
+
+            <div class="nav__menu">
+                <i class="fas fa-bars" onclick="openNav()"></i>
+            </div>
+        </div>
+
+        <div class="header__hero hero">
+            <p class="contenedor text__hero">
+              De la casa
+              <label class="label__hero">-Yogurt de la casa</label>  
+            </p>
+        </div>
+    </header>
+
+    <!--Menu Movil-->
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="#">Inicio</a>
+          <a href="#products">Productos</a>
+          <a href="#contactus">Contáctenos</a>
+        </div>
+    </div>
+
+    <main id="products" class="contenedor products">
+        <h1 class="products__title">Nuestros Productos De la Casa</h1>
+        <div class="products__grid">
+            <div class="grid__item">
+                <img class="item__picture" src="./build/img/product1.jpg">
+                <a href="#" class="item__link">Yogurt</a>
+            </div><!--Item Product-->
+
+            <div class="grid__item">
+                <img class="item__picture" src="./build/img/product2.jpg">
+                <a href="#" class="item__link">Miel de abeja</a>
+            </div><!--Item Product-->
+
+            <div class="grid__item">
+                <img class="item__picture" src="./build/img/product5.jpg">
+                <a href="#" class="item__link">Bocadillo</a>
+            </div><!--Item Product-->
+
+            <div class="grid__item">
+                <img class="item__picture" src="./build/img/product3.jpg">
+                <a href="#" class="item__link">Queso</a>
+            </div><!--Item Product-->
+
+            <div class="grid__item">
+                <img class="item__picture" src="./build/img/product4.jpg">
+                <a href="#" class="item__link">Quesillo</a>
+            </div><!--Item Product-->
+        </div>
+    </main>
+
+    <section id="contactus" class="contactus">
+
+        <div class="contenedor">
+            <h2 class="products__title">Contáctenos</h2>
+
+            <div class="contactus__flex">
+                <div class="flex__item">
+                    <img class="item__photo" src="./build/img/contacus.jpg">
+                </div>
+
+                <div class="flex__text">
+                    <!--Agregar Icono-->
+                    <p><span><i class="fas fa-at"></i></span></i>Email: yogurtdelacasa@gmail.com</p>
+                    <p><span><i class="fas fa-phone-alt"></i></span>Teléfono: 3001234567</p>
+                    <p><span><i class="fas fa-home"></i></span>Domicilio: Neiva - Huila</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!--Whatsapp-->
+    <section id="whatsapp" class="whatsapp">
+        <a class="whatsapp__icon" target="_blank" href="https://wa.me/3209744111?text=Hola!"><i class="fab fa-whatsapp"></i></a>
+    </section>
     
+    <footer class="site__footer">
+        <div class="nav__header nav__header--footer">
+            <div class="nav__image">
+                <img class="nav__logo" src="build/img/logo.svg">
+            </div>
+
+            <div class="nav__a nav__a--footer">
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#contactenos">Contáctenos</a>
+            </div>
+
+        </div>
+
+        <div class="contenedor footer__credits">
+            <p class="credits__text">Development by Alejandro Perdomo</p>
+        </div>
+
+        
+    </footer>
+
+    <!--Scripts-->
+    <script src="src/js/app.js"></script>
 </body>
 </html>

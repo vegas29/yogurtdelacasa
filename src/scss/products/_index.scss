@@ -1,0 +1,60 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.products{
+    padding: 2rem;
+
+    @include m.desktop{
+        padding: v.$separacion;
+    }
+
+    .products__grid{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        column-gap: 3rem;
+        row-gap: 3rem;
+
+        @include m.tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 6rem;
+        }
+    }
+
+    .grid__item{
+        background-color: v.$primarioClaro;
+        border-radius: 1rem;
+
+        img{
+            border-radius: 1rem;
+            width: 30rem;
+        }
+
+        .item__link{
+            border-radius: 1rem;
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            color: v.$blanco;
+            font-weight: bold;
+        }
+    }
+}
+
+.products__title{
+    padding: 2rem 0;
+    font-size: 2.2rem;
+    text-align: center;
+    color: v.$primario;
+
+    @include m.tablet{
+        font-size: 2.8rem;
+    }
+
+    @include m.desktop{
+        font-size: 3.5rem;
+    }
+}

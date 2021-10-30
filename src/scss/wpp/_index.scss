@@ -1,0 +1,27 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.whatsapp{
+    position: fixed;
+    top: 90%;
+    left: 2%;
+    z-index: 2;
+
+    @include m.tablet{
+        top: 90%;
+        left: 1%;
+    }
+
+    i{
+        color: rgb(27, 216, 68);
+        font-size: 4rem;
+
+        &:hover{
+            color:rgb(59, 226, 95);
+        }
+
+        @include m.tablet{
+            font-size: 6rem;
+        }
+    }
+}

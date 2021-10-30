@@ -1,0 +1,63 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.contactus{
+    padding: 2rem;
+    background-color: v.$grisClaro;
+
+    @include m.desktop{
+        padding: v.$separacion;
+    }
+
+    .contactus__flex{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 3rem;
+        flex-direction: column;
+        padding-bottom: 3rem;
+
+        @include m.tablet{
+            flex-direction: row;
+        }
+
+        @include m.desktop{
+            flex-direction: row;
+        }
+    }
+
+    .flex__item{
+        img{
+            width: 12rem;
+            height: 12rem;
+            border-radius: 50%;
+
+            @include m.tablet{
+                width: 18rem;
+                height: 18rem
+            }
+
+            @include m.desktop{
+                width: 22rem;
+                height: 22rem;
+            }
+        }
+        
+    }
+
+    .flex__text{
+        p{
+            color: v.$primario;
+            font-size: 1.5rem;
+
+            @include m.tablet{
+                font-size: 2rem;
+            }
+        }
+
+        span{
+            margin-right: 1rem;
+        }
+        
+    }
+}
